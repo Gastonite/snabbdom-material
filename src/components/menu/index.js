@@ -31,6 +31,7 @@ const insert = (styles) => (vnode) => {
 }
 
 const Menu = function Menu ({
+  maskSettings = {},
   isOpen = false,
   onClose: onClick,
   rightAlign = false,
@@ -47,6 +48,7 @@ const Menu = function Menu ({
   }, [
     Mask({
       dark: false,
+      ...maskSettings,
       isOpen,
       onClick
     }),

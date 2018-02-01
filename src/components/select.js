@@ -5,6 +5,7 @@ import Input from './input'
 import Menu from './menu'
 
 export default function Select ({
+  menuSettings = {},
   isError = false,
   isOpen = false,
   isSuccess = false,
@@ -45,6 +46,7 @@ export default function Select ({
       style: styles.container
     }, [
       Menu({
+        ...menuSettings,
         style: merge({
           menu: {
             top: `${top}px`
